@@ -5,12 +5,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-/*
-		 * Maile Fidale
-		 * Health System
-		 * Prototype 2
-		 * player health, if player misses target, they lose heart
-*/
 
 public class HealthSystem : MonoBehaviour
 {

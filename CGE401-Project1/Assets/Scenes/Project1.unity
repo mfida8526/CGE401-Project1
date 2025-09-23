@@ -521,7 +521,7 @@ MonoBehaviour:
   - {fileID: 1299310103}
   - {fileID: 1648120523}
   speed: 2
-  chaseRange: 3
+  chaseRange: 5
   currentState: 0
   target: {fileID: 0}
 --- !u!1 &506822764
