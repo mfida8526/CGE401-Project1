@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -250,7 +250,7 @@ RectTransform:
   m_GameObject: {fileID: 205142726}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.1676936, y: 2.1676936, z: 2.1676936}
   m_Children:
   - {fileID: 1562583311}
   - {fileID: 367113656}
@@ -260,8 +260,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5185185, y: 0.68111527}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 28, y: 19}
-  m_SizeDelta: {x: -109.45725, y: -41.544403}
+  m_AnchoredPosition: {x: -38, y: 36}
+  m_SizeDelta: {x: -106.02878, y: -42.687225}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &205142728
 MonoBehaviour:
@@ -280,8 +280,8 @@ MonoBehaviour:
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
-  m_ChildAlignment: 3
-  m_Spacing: -72.18
+  m_ChildAlignment: 2
+  m_Spacing: -197.3
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0
@@ -601,7 +601,7 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -9707,7 +9707,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -8.395, y: -8.6}
+  m_AnchoredPosition: {x: -8.394989, y: -8.600006}
   m_SizeDelta: {x: -268.9527, y: -135.33287}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &140282032042929860
