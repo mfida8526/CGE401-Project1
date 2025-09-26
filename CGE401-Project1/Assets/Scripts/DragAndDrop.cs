@@ -11,12 +11,16 @@ public class DragAndDrop : MonoBehaviour
 
     void Start()
     {
-        initialPosition = transform.position;
+        //initialPosition = transform.position;
+        Vector3 pos = transform.position;
+        initialPosition = new Vector3(pos.x, pos.y, 0f);  // Force Z = 0
+        transform.position = initialPosition;  // Optional: Ensure object starts at this corrected position
     }
 
     void OnMouseDown()
     {
         isDragging = true;
+        currentZone = null;
         Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         offset = transform.position - new Vector3(mouseWorldPos.x, mouseWorldPos.y, transform.position.z);
     }
@@ -30,14 +34,19 @@ public class DragAndDrop : MonoBehaviour
             Item item = GetComponent<Item>();
             if (item != null && item.itemType == currentZone.zoneType)
             {
-                Destroy(gameObject);  // Completely removes the object
+                // Notify GameManager
+                SortingGameManager gm = FindObjectOfType<SortingGameManager>();
+                if (gm != null)
+                {
+                    gm.ItemSortedCorrectly();
+                }
+                else
+                {
+                    Debug.LogError("GameManager not found!");
+                }
 
+                Destroy(gameObject);  // Completely removes the object
                 Debug.Log("Item placed correctly and destroyed!");
-            }
-            else
-            {
-                Debug.Log("Wrong zone! Resetting position.");
-                ResetPosition();
             }
         }
         else
@@ -51,13 +60,15 @@ public class DragAndDrop : MonoBehaviour
         if (isDragging)
         {
             Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            transform.position = new Vector3(mouseWorldPos.x, mouseWorldPos.y, transform.position.z) + offset;
+            transform.position = new Vector3(mouseWorldPos.x, mouseWorldPos.y, 0f) + offset;  // Keep Z = 0 while dragging
         }
     }
 
     void ResetPosition()
     {
-        transform.position = initialPosition;
+        //transform.position = initialPosition;
+        transform.position = new Vector3(initialPosition.x, initialPosition.y, 0f);
+        currentZone = null;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

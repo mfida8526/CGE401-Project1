@@ -29,13 +29,17 @@ public class SortingGameManager : MonoBehaviour
 
             if (currentTime <= 0)
             {
-                EndGame(false);
+                EndGame(false);  // Time ran out, player loses
             }
         }
 
-        if (!timerRunning && Input.GetKeyDown(KeyCode.R))
+        // Only listen for 'R' key to restart if game ended by losing
+        if (!timerRunning && statusText.text.Contains("Press R"))
         {
-            StartNewGame();
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                StartNewGame();
+            }
         }
     }
 
@@ -60,12 +64,22 @@ public class SortingGameManager : MonoBehaviour
 
     void EndGame(bool win)
     {
-        timerRunning = false;
-        statusText.text = win ? "You Win!" : "Time's Up! Press R to Restart";
+        timerRunning = false; // Stop the timer
+
+        if (win)
+        {
+            statusText.text = "You Win!";
+            // Optionally, disable dragging or show a "Play Again" button here
+        }
+        else
+        {
+            statusText.text = "Time's Up! Press R to Restart";
+            // Disable dragging as before
+        }
 
         foreach (var drag in FindObjectsOfType<DragAndDrop>())
         {
-            drag.enabled = false;
+            drag.enabled = false; // disable dragging after game ends
         }
     }
 }
