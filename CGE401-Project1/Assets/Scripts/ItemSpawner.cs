@@ -8,8 +8,15 @@ public class ItemSpawner : MonoBehaviour
     public Vector2 spawnAreaMin;      // Bottom-left corner of spawn area
     public Vector2 spawnAreaMax;      // Top-right corner of spawn area
 
-    void Start()
+    public void SpawnItems()
     {
+        // Destroy existing items (if any)
+        foreach (GameObject item in GameObject.FindGameObjectsWithTag("SortableItem"))
+        {
+            Destroy(item);
+        }
+
+        // Spawn new items at random positions
         foreach (GameObject prefab in itemPrefabs)
         {
             Vector2 randomPos = new Vector2(
@@ -21,4 +28,18 @@ public class ItemSpawner : MonoBehaviour
             Instantiate(prefab, spawnPos, Quaternion.identity);
         }
     }
+
+   /* void Start()
+    {
+        foreach (GameObject prefab in itemPrefabs)
+        {
+            Vector2 randomPos = new Vector2(
+                Random.Range(spawnAreaMin.x, spawnAreaMax.x),
+                Random.Range(spawnAreaMin.y, spawnAreaMax.y)
+            );
+
+            Vector3 spawnPos = new Vector3(randomPos.x, randomPos.y, 0f); // Ensure Z = 0
+            Instantiate(prefab, spawnPos, Quaternion.identity);
+        }
+    }*/
 }
