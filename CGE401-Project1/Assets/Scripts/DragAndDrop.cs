@@ -77,6 +77,8 @@ public class DragAndDrop : MonoBehaviour
         if (zone != null)
         {
             currentZone = zone;
+            Debug.Log("Entered zone: " + zone.name);  // ✅ Check if this logs!
+            currentZone = zone;
         }
     }
 
@@ -86,6 +88,8 @@ public class DragAndDrop : MonoBehaviour
         if (zone != null && currentZone == zone)
         {
             currentZone = null;
+            Debug.Log("Entered zone: " + zone.name);  // ✅ Check if this logs!
+            currentZone = zone;
         }
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System;
 
 public class SortingGameManager : MonoBehaviour
 {
@@ -9,10 +10,27 @@ public class SortingGameManager : MonoBehaviour
     public TextMeshProUGUI timerText;
     public TextMeshProUGUI statusText;
 
-    public float timeLimit = 15f;
+    public float timeLimit = 30f;
     private float currentTime;
     private bool timerRunning = true;
     private int itemsSorted = 0;
+
+    public event Action<bool> OnMinigameComplete;
+
+    public void WinGame()
+    {
+        OnMinigameComplete?.Invoke(true);
+    }
+
+    public void LoseGame()
+    {
+        OnMinigameComplete?.Invoke(false);
+    }
+
+    void RestartGame()
+    {
+        // Reset timer, positions, etc.
+    }
 
     void Start()
     {
@@ -82,4 +100,6 @@ public class SortingGameManager : MonoBehaviour
             drag.enabled = false; // disable dragging after game ends
         }
     }
+
+    
 }

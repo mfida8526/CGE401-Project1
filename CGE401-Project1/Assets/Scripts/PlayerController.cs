@@ -63,9 +63,14 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter2D(Collider2D collison)
+    private void OnTriggerEnter2D(Collider2D other)
     {
            isGrounded = true;
            animator.SetBool("isJumping", !isGrounded);
+
+        if (other.CompareTag("FoodTrigger"))
+        {
+            FindObjectOfType<MinigameManager>().LaunchMinigame();
+        }
     }
 }
