@@ -1,15 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
 public class ClickableItem : MonoBehaviour, IPointerClickHandler
 {
-    private GameTimer3 gameTimer; // Reference to your timer script
-
+    public GameTimer3 gameTimer; // Reference to your timer script
+    
     void Start()
     {
-        gameTimer = FindObjectOfType<GameTimer3>(); // Find the timer in the scene
+        GameTimer3 gameTimer = GetComponent<GameTimer3>();
     }
 
 
@@ -20,7 +21,8 @@ public class ClickableItem : MonoBehaviour, IPointerClickHandler
        {
             Debug.Log("Item Clicked before time ran out!");
             // Perform action, e.g., destroy item, add score
-            Destroy(gameObject);
+
+           
        }
        else
        {

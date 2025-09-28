@@ -7,9 +7,12 @@ public class GameTimer3 : MonoBehaviour
 {
     public float maxTime = 30f;
     public Text timerText; // Assign in Inspector
+    public int maxFood;
 
+    public List<Image> ClickableObject;
     private float timeRemaining;
     private bool timerIsRunning = false;
+   
 
     void Start()
     {
@@ -30,11 +33,32 @@ public class GameTimer3 : MonoBehaviour
             {
                 timeRemaining = 0;
                 timerIsRunning = false;
-                timerText.text = "Time's Up!";
+                timerText.text = "Time's up!\n Press R to retry!'";
                 Debug.Log("Game Over - Time Ran Out!");
                 // Trigger game over logic here
             }
         }
+
+        if (!timerIsRunning && timerText.text.Contains("Press R"))
+        {
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                StartNewGame();
+            }
+        }
+    }
+    
+    public void AddMaxFood()
+    {
+        maxFood++;
+    }
+
+    void StartNewGame()
+    {
+        timeRemaining = maxTime;
+        timerIsRunning = true;
+        timerText.text = "";
+        AddMaxFood();
     }
 
     public bool IsTimerRunning()
