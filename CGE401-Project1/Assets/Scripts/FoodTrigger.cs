@@ -1,23 +1,39 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
+using System;
 
 public class FoodTrigger : MonoBehaviour
 {
-    public GameObject uiPanel;
+    
+    public GameObject sortingMinigame;
+    
+    
+    void Start()
+    {
+        sortingMinigame.GetComponent<SortingGameManager>();
+    }
 
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            if (uiPanel != null)
+            if (sortingMinigame != null)
             {
-                uiPanel.SetActive(true);
+                sortingMinigame.SetActive(true);
+                Interact();
             }
             else
             {
-                uiPanel.SetActive(false);
+                sortingMinigame.SetActive(false);
             }
         }
+    }
+
+    private void Interact()
+    {
+        sortingMinigame.SetActive(true);
     }
 }
