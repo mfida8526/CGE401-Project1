@@ -14,6 +14,7 @@ public class FoodTrigger : MonoBehaviour
     void Start()
     {
         sortingMinigame.GetComponent<SortingGameManager>();
+        sortingMinigame.SetActive(false);
     }
 
     void OnTriggerEnter2D(Collider2D other)
