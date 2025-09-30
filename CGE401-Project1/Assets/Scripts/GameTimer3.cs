@@ -12,6 +12,7 @@ public class GameTimer3 : MonoBehaviour
     public List<Image> ClickableObject;
     private float timeRemaining;
     private bool timerIsRunning = false;
+    public ClickableItem clickableItem;
    
 
     void Start()
@@ -59,6 +60,7 @@ public class GameTimer3 : MonoBehaviour
         timerIsRunning = true;
         timerText.text = "";
         AddMaxFood();
+        clickableItem.RespawnItem();
     }
 
     public bool IsTimerRunning()

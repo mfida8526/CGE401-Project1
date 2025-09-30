@@ -276,7 +276,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 982d725a623283a49b8b06c3bcb6988f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameTimer: {fileID: 0}
+  gameTimer: {fileID: 1314969283}
+  clickTimeLimit: 5
+  respawnDelay: 1
 --- !u!1 &184309849
 GameObject:
   m_ObjectHideFlags: 0
@@ -442,6 +444,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameTimer: {fileID: 0}
+  clickTimeLimit: 5
+  respawnDelay: 3
 --- !u!1 &390100135
 GameObject:
   m_ObjectHideFlags: 0
@@ -859,6 +863,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameTimer: {fileID: 0}
+  clickTimeLimit: 5
+  respawnDelay: 3
 --- !u!1 &1248941229
 GameObject:
   m_ObjectHideFlags: 0
@@ -1041,6 +1047,7 @@ MonoBehaviour:
   - {fileID: 184309853}
   - {fileID: 1706100596}
   - {fileID: 863860248}
+  clickableItem: {fileID: 12758074}
 --- !u!1 &1506368966
 GameObject:
   m_ObjectHideFlags: 0
@@ -1448,6 +1455,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameTimer: {fileID: 0}
+  clickTimeLimit: 5
+  respawnDelay: 3
 --- !u!1 &1993443159
 GameObject:
   m_ObjectHideFlags: 0
@@ -1613,3 +1622,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameTimer: {fileID: 0}
+  clickTimeLimit: 5
+  respawnDelay: 3
