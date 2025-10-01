@@ -13,9 +13,10 @@ public class ClickableItem : MonoBehaviour, IPointerClickHandler
     private float currentTimer;
     private bool isActive = true; 
     
+        
     void Start()
     {
-        GameTimer3 gameTimer = GetComponent<GameTimer3>();
+       GameTimer3 gameTimer = GetComponent<GameTimer3>();
     }
 
     void OnEnable()
@@ -49,7 +50,7 @@ public class ClickableItem : MonoBehaviour, IPointerClickHandler
     public IEnumerator RespawnItem()
     {
         gameObject.SetActive(false); // Hide the item
-        yield return new WaitForSeconds(respawnDelay); // Wait for respawn delay
+        yield return new WaitForSeconds(respawnDelay);// Wait for respawn delay
         gameObject.SetActive(true); // Show the item again
         // OnEnable will reset the timer automatically
     }

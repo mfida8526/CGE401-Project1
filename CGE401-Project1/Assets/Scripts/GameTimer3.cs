@@ -54,7 +54,7 @@ public class GameTimer3 : MonoBehaviour
         maxFood++;
     }
 
-    void StartNewGame()
+    public void StartNewGame()
     {
         timeRemaining = maxTime;
         timerIsRunning = true;
