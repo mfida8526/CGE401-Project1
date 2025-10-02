@@ -1,0 +1,64 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class IntroductionText : MonoBehaviour
+{
+    public GameObject introductionPanel;
+    public Text introductionText;
+    public string[] dialogue;
+    private int index;
+
+    public GameObject contButton;
+    public float wordSpeed;
+
+    void Start()
+    {
+        introductionPanel.SetActive(true);
+    }
+    // Update is called once per frame
+    void Update()
+    {
+        
+        if (introductionText.text == dialogue[index])
+        {
+            contButton.SetActive(true);
+        }
+    }
+
+    public void zeroText()
+    {
+        introductionText.text = "";
+        index = 0;
+        introductionPanel.SetActive(false);
+    }
+
+    IEnumerator Typing()
+    {
+        foreach (char letter in dialogue[index].ToCharArray())
+        {
+            introductionText.text += letter;
+            yield return new WaitForSeconds(wordSpeed);
+        }
+    }
+
+    public void NextLine()
+    {
+
+        contButton.SetActive(false);
+
+        if (index < dialogue.Length - 1)
+        {
+            index++;
+            introductionText.text = "";
+            StartCoroutine(Typing());
+        }
+        else
+        {
+            zeroText();
+            introductionPanel.SetActive(false); ;
+        }
+    }
+}
+
