@@ -14,10 +14,18 @@ public class HealthSystem : MonoBehaviour
     public List<Image> hearts;
     public Sprite fullHeart;
     public Sprite emptyHeart;
+    private AudioSource playerAudio;
+
+    public AudioClip playerHitSound;
 
     public bool gameOver = false;
 
     public GameObject gameOverText;
+
+    void Start()
+    {
+        playerAudio = GetComponent<AudioSource>();
+    }
 
     void Update()
     {
@@ -68,6 +76,8 @@ public class HealthSystem : MonoBehaviour
     public void TakeDamage()
     {
         health--;
+        playerAudio.PlayOneShot(playerHitSound);
+
     }
 
     public void AddMaxHealth()

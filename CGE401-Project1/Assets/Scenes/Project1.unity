@@ -1715,6 +1715,11 @@ PrefabInstance:
       propertyPath: patrolPoints.Array.data[1]
       value: 
       objectReference: {fileID: 53710990}
+    - target: {fileID: 140282031921050023, guid: 941e7ee83261d544ea3367503892f38b,
+        type: 3}
+      propertyPath: healthSystem
+      value: 
+      objectReference: {fileID: 1094422508}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 941e7ee83261d544ea3367503892f38b, type: 3}
 --- !u!4 &349058829 stripped
@@ -2441,6 +2446,11 @@ PrefabInstance:
       propertyPath: patrolPoints.Array.data[1]
       value: 
       objectReference: {fileID: 1164869127}
+    - target: {fileID: 140282031921050023, guid: 941e7ee83261d544ea3367503892f38b,
+        type: 3}
+      propertyPath: healthSystem
+      value: 
+      objectReference: {fileID: 1094422508}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 941e7ee83261d544ea3367503892f38b, type: 3}
 --- !u!4 &487807878 stripped
@@ -28060,7 +28070,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!156049354 &1026372297
 Grid:
   m_ObjectHideFlags: 0
@@ -28433,6 +28443,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1094422509}
   - component: {fileID: 1094422508}
+  - component: {fileID: 1094422510}
   m_Layer: 0
   m_Name: HealthSystem
   m_TagString: HealthSystem
@@ -28460,6 +28471,7 @@ MonoBehaviour:
   - {fileID: 278376873}
   fullHeart: {fileID: 21300000, guid: 0de1f54bd52fda948b804ec457ed4284, type: 3}
   emptyHeart: {fileID: 21300002, guid: 0de1f54bd52fda948b804ec457ed4284, type: 3}
+  playerHitSound: {fileID: 8300000, guid: 4daa0564756f5e44795f73d1d97b2ad7, type: 3}
   gameOver: 0
   gameOverText: {fileID: 178579511}
 --- !u!4 &1094422509
@@ -28476,6 +28488,102 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1094422510
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1094422507}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 0.484
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1116738302
 GameObject:
   m_ObjectHideFlags: 0
@@ -31376,6 +31484,11 @@ PrefabInstance:
       propertyPath: patrolPoints.Array.data[1]
       value: 
       objectReference: {fileID: 915195333}
+    - target: {fileID: 140282031921050023, guid: 941e7ee83261d544ea3367503892f38b,
+        type: 3}
+      propertyPath: healthSystem
+      value: 
+      objectReference: {fileID: 1094422508}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 941e7ee83261d544ea3367503892f38b, type: 3}
 --- !u!4 &1367656436 stripped
@@ -33894,6 +34007,11 @@ PrefabInstance:
       propertyPath: patrolPoints.Array.data[1]
       value: 
       objectReference: {fileID: 918422622}
+    - target: {fileID: 140282031921050023, guid: 941e7ee83261d544ea3367503892f38b,
+        type: 3}
+      propertyPath: healthSystem
+      value: 
+      objectReference: {fileID: 1094422508}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 941e7ee83261d544ea3367503892f38b, type: 3}
 --- !u!4 &1576474740 stripped
@@ -34296,6 +34414,11 @@ PrefabInstance:
       propertyPath: patrolPoints.Array.data[1]
       value: 
       objectReference: {fileID: 868314487}
+    - target: {fileID: 140282031921050023, guid: 941e7ee83261d544ea3367503892f38b,
+        type: 3}
+      propertyPath: healthSystem
+      value: 
+      objectReference: {fileID: 1094422508}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 941e7ee83261d544ea3367503892f38b, type: 3}
 --- !u!4 &1635622478 stripped
@@ -34486,6 +34609,11 @@ PrefabInstance:
       propertyPath: patrolPoints.Array.data[1]
       value: 
       objectReference: {fileID: 370417248}
+    - target: {fileID: 140282031921050023, guid: 941e7ee83261d544ea3367503892f38b,
+        type: 3}
+      propertyPath: healthSystem
+      value: 
+      objectReference: {fileID: 1094422508}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 941e7ee83261d544ea3367503892f38b, type: 3}
 --- !u!4 &1750752382 stripped
@@ -35180,6 +35308,11 @@ PrefabInstance:
       propertyPath: patrolPoints.Array.data[1]
       value: 
       objectReference: {fileID: 1354533575}
+    - target: {fileID: 140282031921050023, guid: 941e7ee83261d544ea3367503892f38b,
+        type: 3}
+      propertyPath: healthSystem
+      value: 
+      objectReference: {fileID: 1094422508}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 941e7ee83261d544ea3367503892f38b, type: 3}
 --- !u!4 &1889502719 stripped
@@ -35204,7 +35337,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!156049354 &1908370362
 Grid:
   m_ObjectHideFlags: 0
