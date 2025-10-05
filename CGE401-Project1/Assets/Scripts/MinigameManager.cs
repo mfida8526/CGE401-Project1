@@ -15,7 +15,6 @@ public class MinigameManager : MonoBehaviour
         //currentMinigame = Instantiate(minigamePrefab, minigamePanelParent);
         currentMinigame = Instantiate(minigamePrefab); // No parent
         currentMinigame.GetComponent<SortingGameManager>().OnMinigameComplete += HandleMinigameEnd;
-
         // Pause the main game (optional)
         Time.timeScale = 0f;
     }
