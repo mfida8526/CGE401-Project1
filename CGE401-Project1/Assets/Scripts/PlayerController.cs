@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+/*
+* Mimi Davis and Maile Fidale
+* Project1
+* Player movement and sound effects
+*/
     public float moveSpeed = 5f;
     public float jumpForce = 10f;
     public LayerMask groundLayer;
@@ -14,11 +19,14 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private float horizontalInput;
     private Animator animator;
+    public AudioClip jumpSound;
+    private AudioSource playerAudio;
     
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        playerAudio = GetComponent<AudioSource>();
         animator = GetComponent<Animator>();
         
         if (groundCheck == null)
@@ -38,6 +46,7 @@ public class PlayerController : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             isGrounded = false;
             animator.SetBool("isJumping", !isGrounded);
+            playerAudio.PlayOneShot(jumpSound, 1.0f);
         }
     }
 
