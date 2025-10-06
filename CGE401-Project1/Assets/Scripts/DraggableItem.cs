@@ -12,25 +12,25 @@ public enum ItemType
 
 public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
+    public ItemType itemType;
+    public SortingGameManager sortingGameManager;
+
     private RectTransform rectTransform;
-    private Transform originalParent;
     private Vector2 originalPosition;
+    private Transform originalParent;
     private Canvas canvas;
 
-    public ItemType itemType;
-
-    private void Awake()
+    void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
-        originalParent = transform.parent;
         originalPosition = rectTransform.anchoredPosition;
+        originalParent = transform.parent;
         canvas = GetComponentInParent<Canvas>();
     }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        Debug.Log("Drag started: " + gameObject.name);
-        transform.SetParent(canvas.transform); // bring to front
+        transform.SetParent(canvas.transform); // Bring to front
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -47,29 +47,23 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
         foreach (RaycastResult r in results)
         {
-            DropZone dropZone = r.gameObject.GetComponent<DropZone>();
-            if (dropZone != null)
+            DropZone dz = r.gameObject.GetComponent<DropZone>();
+            if (dz != null && dz.acceptedType == itemType)
             {
-                if (dropZone.acceptedType == itemType)
-                {
-                    droppedInCorrectZone = true;
-                    break;
-                }
+                droppedInCorrectZone = true;
+                sortingGameManager.ItemSortedCorrectly();
+                break;
             }
         }
 
         if (droppedInCorrectZone)
         {
-            Debug.Log($"Dropped {itemType} in correct zone. Destroying {gameObject.name}");
             Destroy(gameObject);
         }
         else
         {
-            Debug.Log($"Dropped {itemType} in wrong zone or no zone. Returning {gameObject.name}");
             transform.SetParent(originalParent);
             rectTransform.anchoredPosition = originalPosition;
         }
     }
-
 }
-

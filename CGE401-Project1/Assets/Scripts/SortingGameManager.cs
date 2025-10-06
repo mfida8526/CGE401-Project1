@@ -2,37 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using System;
 
-/*public class SortingGameManager : MonoBehaviour
+public class SortingGameManager : MonoBehaviour
 {
-    //public ItemSpawner itemSpawner;       // Assign in Inspector
+    public ItemSpawner itemSpawner;
     public TextMeshProUGUI timerText;
     public TextMeshProUGUI statusText;
-    public TextMeshProUGUI fruitText;
-    public TextMeshProUGUI vegetableText;
 
     public float timeLimit = 30f;
     private float currentTime;
-    private bool timerRunning = true;
+    private bool timerRunning = false;
     private int itemsSorted = 0;
 
-    public event Action<bool> OnMinigameComplete;
+    private int totalItemsToSort;
 
-    public void WinGame()
-    {
-        OnMinigameComplete?.Invoke(true);
-    }
-
-    public void LoseGame()
-    {
-        OnMinigameComplete?.Invoke(false);
-    }
-
-    void RestartGame()
-    {
-        // Reset timer, positions, etc.
-    }
 
     void Start()
     {
@@ -45,15 +28,14 @@ using System;
         {
             currentTime -= Time.deltaTime;
             currentTime = Mathf.Clamp(currentTime, 0, timeLimit);
-            timerText.text = "Time: " + Mathf.CeilToInt(currentTime).ToString();
+            timerText.text = "Time: " + Mathf.CeilToInt(currentTime);
 
             if (currentTime <= 0)
             {
-                EndGame(false);  // Time ran out, player loses
+                EndGame(false);
             }
         }
 
-        // Only listen for 'R' key to restart if game ended by losing
         if (!timerRunning && statusText.text.Contains("Press R"))
         {
             if (Input.GetKeyDown(KeyCode.R))
@@ -63,43 +45,30 @@ using System;
         }
     }
 
-    void StartNewGame()
-    {
-        currentTime = timeLimit;
-        timerRunning = true;
-        itemsSorted = 0;
-        statusText.text = "";
-
-        itemSpawner.SpawnItems();  // Spawn items using your ItemSpawner
-    }
-
     public void ItemSortedCorrectly()
     {
         itemsSorted++;
-        if (itemsSorted >= itemSpawner.itemPrefabs.Length)
+
+        if (itemsSorted >= totalItemsToSort)
         {
             EndGame(true);
         }
     }
 
+    void StartNewGame()
+    {
+        itemsSorted = 0;
+        currentTime = timeLimit;
+        timerRunning = true;
+        statusText.text = "";
+
+        itemSpawner.SpawnFoodItems();
+        totalItemsToSort = itemSpawner.spawnedItems.Count;
+    }
+
     void EndGame(bool win)
     {
-        timerRunning = false; // Stop the timer
-
-        if (win)
-        {
-            statusText.text = "You Win!";
-            // Optionally, disable dragging or show a "Play Again" button here
-        }
-        else
-        {
-            statusText.text = "Time's Up! Press R to Restart";
-            // Disable dragging as before
-        }
-
-        /*foreach (var drag in FindObjectsOfType<DragAndDrop>())
-        {
-            drag.enabled = false; // disable dragging after game ends
-        }
+        timerRunning = false;
+        statusText.text = win ? "You Win!" : "Time's Up! Press R to Restart";
     }
-}*/
+}

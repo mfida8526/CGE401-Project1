@@ -4,42 +4,47 @@ using UnityEngine;
 
 public class ItemSpawner : MonoBehaviour
 {
-    public GameObject[] itemPrefabs;  // Assign prefabs in Inspector
-    public Vector2 spawnAreaMin;      // Bottom-left corner of spawn area
-    public Vector2 spawnAreaMax;      // Top-right corner of spawn area
+    public List<GameObject> foodPrefabs; // Assign your fruit and veggie prefabs
+    public RectTransform spawnArea;
+    public int spawnCount = 16;
+    public SortingGameManager sortingGameManager;
 
-    public void SpawnItems()
+    public List<GameObject> spawnedItems = new List<GameObject>();
+
+    public void SpawnFoodItems()
     {
-        // Destroy existing items (if any)
-        foreach (GameObject item in GameObject.FindGameObjectsWithTag("SortableItem"))
+        // Clean up old items
+        foreach (var item in spawnedItems)
         {
-            Destroy(item);
+            if (item != null) Destroy(item);
         }
+        spawnedItems.Clear();
 
-        // Spawn new items at random positions
-        foreach (GameObject prefab in itemPrefabs)
+        for (int i = 0; i < spawnCount; i++)
         {
-            Vector2 randomPos = new Vector2(
-                Random.Range(spawnAreaMin.x, spawnAreaMax.x),
-                Random.Range(spawnAreaMin.y, spawnAreaMax.y)
-            );
+            GameObject prefab = foodPrefabs[Random.Range(0, foodPrefabs.Count)];
+            GameObject item = Instantiate(prefab, spawnArea);
+            item.transform.localScale = Vector3.one;
 
-            Vector3 spawnPos = new Vector3(randomPos.x, randomPos.y, 0f); // Ensure Z = 0
-            Instantiate(prefab, spawnPos, Quaternion.identity);
+            RectTransform rt = item.GetComponent<RectTransform>();
+            rt.anchoredPosition = GetRandomPositionInRect(spawnArea);
+
+            DraggableItem draggable = item.GetComponent<DraggableItem>();
+            if (draggable != null)
+            {
+                draggable.sortingGameManager = sortingGameManager;
+            }
+
+            spawnedItems.Add(item);
         }
     }
 
-   /* void Start()
+    Vector2 GetRandomPositionInRect(RectTransform rect)
     {
-        foreach (GameObject prefab in itemPrefabs)
-        {
-            Vector2 randomPos = new Vector2(
-                Random.Range(spawnAreaMin.x, spawnAreaMax.x),
-                Random.Range(spawnAreaMin.y, spawnAreaMax.y)
-            );
-
-            Vector3 spawnPos = new Vector3(randomPos.x, randomPos.y, 0f); // Ensure Z = 0
-            Instantiate(prefab, spawnPos, Quaternion.identity);
-        }
-    }*/
+        Vector2 size = rect.rect.size;
+        return new Vector2(
+            Random.Range(-size.x / 2f, size.x / 2f),
+            Random.Range(-size.y / 2f, size.y / 2f)
+        );
+    }
 }
