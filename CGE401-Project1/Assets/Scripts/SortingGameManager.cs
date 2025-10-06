@@ -4,11 +4,13 @@ using UnityEngine;
 using TMPro;
 using System;
 
-public class SortingGameManager : MonoBehaviour
+/*public class SortingGameManager : MonoBehaviour
 {
-    public ItemSpawner itemSpawner;       // Assign in Inspector
+    //public ItemSpawner itemSpawner;       // Assign in Inspector
     public TextMeshProUGUI timerText;
     public TextMeshProUGUI statusText;
+    public TextMeshProUGUI fruitText;
+    public TextMeshProUGUI vegetableText;
 
     public float timeLimit = 30f;
     private float currentTime;
@@ -95,11 +97,9 @@ public class SortingGameManager : MonoBehaviour
             // Disable dragging as before
         }
 
-        foreach (var drag in FindObjectsOfType<DragAndDrop>())
+        /*foreach (var drag in FindObjectsOfType<DragAndDrop>())
         {
             drag.enabled = false; // disable dragging after game ends
         }
     }
-
-    
-}
+}*/

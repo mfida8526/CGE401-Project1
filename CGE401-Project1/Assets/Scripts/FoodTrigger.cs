@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 using System;
 
-public class FoodTrigger : MonoBehaviour
+/*public class FoodTrigger : MonoBehaviour
 {
     
     public GameObject sortingMinigame;
@@ -37,4 +37,4 @@ public class FoodTrigger : MonoBehaviour
     {
         sortingMinigame.SetActive(true);
     }
-}
+}*/
