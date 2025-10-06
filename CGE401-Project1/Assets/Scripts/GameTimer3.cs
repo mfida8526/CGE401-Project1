@@ -2,69 +2,103 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class GameTimer3 : MonoBehaviour
 {
-    public float maxTime = 30f;
-    public Text timerText; // Assign in Inspector
-    public int maxFood;
+    
+    
+    public float timeLimit = 10f; // Time limit for the minigame
+    private float currentTime;
+    private bool gameActive = false;
+    public TextMeshProUGUI timerText;
 
-    public List<Image> ClickableObject;
-    private float timeRemaining;
-    private bool timerIsRunning = false;
-    public ClickableItem clickableItem;
-   
+    public List<ClickableItem> allItems; // Assign all your clickable items here in the Inspector
+
+    void OnEnable()
+    {
+        ClickableItem.OnItemClicked += HandleItemClicked;
+    }
+
+    void OnDisable()
+    {
+        ClickableItem.OnItemClicked -= HandleItemClicked;
+    }
 
     void Start()
     {
-        timeRemaining = maxTime;
-        timerIsRunning = true;
+        StartMinigame();
     }
 
     void Update()
     {
-        if (timerIsRunning)
+        if (gameActive)
         {
-            if (timeRemaining > 0)
+            currentTime -= Time.deltaTime;
+            timerText.text = $"Time Left: {Mathf.Max(0, currentTime):F2}";
+            if (currentTime <= 0)
             {
-                timeRemaining -= Time.deltaTime;
-                timerText.text = "Time: " + Mathf.FloorToInt(timeRemaining).ToString();
-            }
-            else
-            {
-                timeRemaining = 0;
-                timerIsRunning = false;
-                timerText.text = "Time's up!\n Press R to retry!'";
-                Debug.Log("Game Over - Time Ran Out!");
-                // Trigger game over logic here
+                EndMinigame(false); // Time ran out
             }
         }
 
-        if (!timerIsRunning && timerText.text.Contains("Press R"))
+
+        if (Input.GetKeyDown(KeyCode.R))
         {
-            if (Input.GetKeyDown(KeyCode.R))
-            {
-                StartNewGame();
-            }
+            RestartMinigame();
         }
     }
-    
-    public void AddMaxFood()
+
+    void StartMinigame()
     {
-        maxFood++;
+        currentTime = timeLimit;
+        gameActive = true;
+        foreach (ClickableItem item in allItems)
+        {
+            item.ResetItem(); // Ensure all items are visible
+        }
+        // Additional setup like displaying timer, etc.
     }
 
-    public void StartNewGame()
+    void HandleItemClicked(GameObject clickedItem)
     {
-        timeRemaining = maxTime;
-        timerIsRunning = true;
-        timerText.text = "";
-        AddMaxFood();
-        clickableItem.RespawnItem();
+        // Logic for checking if all items are clicked, etc.
+        // For simplicity, we'll just check if all are inactive
+        bool allClicked = true;
+        foreach (ClickableItem item in allItems)
+        {
+            if (item.gameObject.activeSelf)
+            {
+                allClicked = false;
+                break;
+            }
+        }
+
+        if (allClicked)
+        {
+            EndMinigame(true); // All items clicked
+        }
     }
 
-    public bool IsTimerRunning()
+    void EndMinigame(bool win)
     {
-        return timerIsRunning;
+        gameActive = false;
+        if (win)
+        {
+            timerText.text = "You Win!\n Press the X to exit the minigame!";
+        }
+        else
+        {
+            timerText.text = "You Lose!\n Press R to retry!";
+        }
+        // Display game over message, etc.
+    }
+
+    void RestartMinigame()
+    {
+        Debug.Log("Restarting Minigame...");
+        timerText.text = $"Time Left: {timeLimit:F2}";
+
+        StartMinigame();
     }
 }

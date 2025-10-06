@@ -53,8 +53,6 @@ public class MinigameController : MonoBehaviour
         {
             EndGame(false); // Player loses (time ran out)
         }
-        
-
     }
 
     void OnMash()
