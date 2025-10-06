@@ -15,7 +15,7 @@ public class MinigameController : MonoBehaviour
     public Button mashButton;
     public TextMeshProUGUI counterText;
     public TextMeshProUGUI timerText;
-     public List<MashButton> allItems;
+    public List<MashButton> allItems;
     // Game parameters
     public float timeLimit = 10f; // 10 seconds
     public int winCount = 50; // Mash the button 50 times to win
@@ -54,19 +54,15 @@ public class MinigameController : MonoBehaviour
         {
             EndGame(false); // Player loses (time ran out)
         }
-
-        
     }
 
     void StartMinigame()
     {
-        currentTime = timeLimit;
-        gameActive = true;
+        
         foreach (MashButton item in allItems)
         {
             item.ResetItem(); // Ensure all items are visible
-        }
-        
+        }   
     }
 
     void OnMash()
@@ -80,7 +76,6 @@ public class MinigameController : MonoBehaviour
 
     void ResetGame()
     {
-        
         gameActive = true;
         mashCount = 0;
         currentTime = timeLimit;
@@ -105,11 +100,11 @@ public class MinigameController : MonoBehaviour
         }
         else
         {
-            timerText.text = "Time's Up!\n Press the X button to try again!";
+            timerText.text = "Time's Up!\n Press the R to retry!";
 
             if (Input.GetKeyDown(KeyCode.R))
             {
-            ResetGame();
+                ResetGame();
             }
         }
     }
