@@ -18848,7 +18848,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1261723861}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 5
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
@@ -31839,7 +31839,7 @@ PrefabInstance:
     - target: {fileID: 8604872976464142788, guid: e13fbd584b639d248adc6bca1b28383f,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.8000183
+      value: 0.8000488
       objectReference: {fileID: 0}
     - target: {fileID: 8604872976464142788, guid: e13fbd584b639d248adc6bca1b28383f,
         type: 3}
@@ -32678,7 +32678,7 @@ PrefabInstance:
     - target: {fileID: 8604872976464142788, guid: e13fbd584b639d248adc6bca1b28383f,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.8000183
+      value: 0.8000488
       objectReference: {fileID: 0}
     - target: {fileID: 8604872976464142788, guid: e13fbd584b639d248adc6bca1b28383f,
         type: 3}
@@ -34818,6 +34818,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 215e23c886a942c41b7d60f3a4883a93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_Name: 
   m_EditorClassIdentifier: 
   m_Name: 
@@ -41416,6 +41418,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
   minigamePrefab: {fileID: 133849180}
   currentMinigame: {fileID: 0}
   minigamePanelParent: {fileID: 0}
@@ -41476,6 +41480,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 215e23c886a942c41b7d60f3a4883a93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_Name: 
   m_EditorClassIdentifier: 
   m_Name: 
@@ -51172,6 +51178,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
   sortingMinigame: {fileID: 0}
 --- !u!61 &2090310505
 BoxCollider2D:
@@ -51378,7 +51386,7 @@ PrefabInstance:
     - target: {fileID: 8604872976464142788, guid: e13fbd584b639d248adc6bca1b28383f,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.8000183
+      value: 0.8000488
       objectReference: {fileID: 0}
     - target: {fileID: 8604872976464142788, guid: e13fbd584b639d248adc6bca1b28383f,
         type: 3}

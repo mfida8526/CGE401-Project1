@@ -13,7 +13,7 @@ public class FoodTrigger2 : MonoBehaviour
 {
     
     public GameObject mashingMinigame;
-    bool active = true;
+    
     
     void Start()
     {
