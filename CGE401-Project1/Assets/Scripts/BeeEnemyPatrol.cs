@@ -1,7 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/*
+* Mimi Davis
+* Project1
+* Code makes the bee enemies patrol and chase player if they are in range
+*/
 public class BeeEnemyPatrol : MonoBehaviour
 {
     public GameObject[] patrolPoints;

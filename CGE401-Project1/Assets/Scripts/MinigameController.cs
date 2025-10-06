@@ -1,12 +1,13 @@
-﻿using UnityEngine;
-using TMPro; // For TextMeshPro
-using UnityEngine.UI; // For the Button component
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using TMPro; 
+using UnityEngine.UI;
 /*
 * Mimi Davis
 * Project1
-* Game Manager for cookie clicker like minigame
+* Game Manager for mashing-like minigame with a timer 
 */
-
 
 public class MinigameController : MonoBehaviour
 {
@@ -14,7 +15,7 @@ public class MinigameController : MonoBehaviour
     public Button mashButton;
     public TextMeshProUGUI counterText;
     public TextMeshProUGUI timerText;
-
+     public List<MashButton> allItems;
     // Game parameters
     public float timeLimit = 10f; // 10 seconds
     public int winCount = 50; // Mash the button 50 times to win
@@ -23,7 +24,7 @@ public class MinigameController : MonoBehaviour
     private int mashCount = 0;
     private float currentTime;
     private bool gameActive = false;
-
+    
     void Start()
     {
         // Add a listener to the button's OnClick event
@@ -53,6 +54,19 @@ public class MinigameController : MonoBehaviour
         {
             EndGame(false); // Player loses (time ran out)
         }
+
+        
+    }
+
+    void StartMinigame()
+    {
+        currentTime = timeLimit;
+        gameActive = true;
+        foreach (MashButton item in allItems)
+        {
+            item.ResetItem(); // Ensure all items are visible
+        }
+        
     }
 
     void OnMash()
@@ -66,7 +80,7 @@ public class MinigameController : MonoBehaviour
 
     void ResetGame()
     {
-    
+        
         gameActive = true;
         mashCount = 0;
         currentTime = timeLimit;
@@ -77,20 +91,26 @@ public class MinigameController : MonoBehaviour
 
         // Make sure the button is interactable
         mashButton.interactable = true;
+        StartMinigame();
     }
 
     void EndGame(bool won)
     {
-        gameActive = false;
         mashButton.interactable = false; // Disable the button
 
         if (won)
         {
+            gameActive = false;
             timerText.text = "You Win!\n Press the X button to exit!";
         }
         else
         {
             timerText.text = "Time's Up!\n Press the X button to try again!";
+
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+            ResetGame();
+            }
         }
     }
 }

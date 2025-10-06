@@ -1,7 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/*
+* Mimi Davis
+* Project1
+* Camera follows player as they move around on the map
+*/
 public class CamFollowPlayer : MonoBehaviour
 {
     //Set this reference to the player in the inspector

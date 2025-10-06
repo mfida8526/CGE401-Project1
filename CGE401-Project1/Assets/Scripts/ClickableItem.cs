@@ -3,7 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
-
+/*
+* Mimi Davis
+* Project1
+* Code for the item's you click on in clickable minigame
+*/
 public class ClickableItem : MonoBehaviour
 {
     public delegate void ItemClickedAction(GameObject clickedItem);

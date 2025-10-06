@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+/*
+* Mimi Davis
+* Project1
+* Game Manager for clickable minigame, has a timer and resets minigame
+*/
 
 public class GameTimer3 : MonoBehaviour
 {

@@ -384,6 +384,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clicking Minigame
       objectReference: {fileID: 0}
+    - target: {fileID: 8402375294591395122, guid: 0c0895c8aa4daa84b99e034e1c2e3a2b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8402375294591395123, guid: 0c0895c8aa4daa84b99e034e1c2e3a2b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -608,11 +613,5 @@ PrefabInstance:
       propertyPath: m_Name
       value: CookieClickerMinigame
       objectReference: {fileID: 0}
-    - target: {fileID: 8604872976464142789, guid: e13fbd584b639d248adc6bca1b28383f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 8604872976464142791, guid: e13fbd584b639d248adc6bca1b28383f, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e13fbd584b639d248adc6bca1b28383f, type: 3}

@@ -343,7 +343,6 @@ GameObject:
   - component: {fileID: 8604872976464142788}
   - component: {fileID: 8604872976464142793}
   - component: {fileID: 8604872976464142790}
-  - component: {fileID: 8604872976464142791}
   - component: {fileID: 3635228287687148237}
   m_Layer: 5
   m_Name: CookieClickerMinigame
@@ -411,18 +410,6 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
---- !u!114 &8604872976464142791
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8604872976464142789}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec8c690f99665be428f8f2ef52cece54, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &3635228287687148237
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1027,6 +1014,8 @@ MonoBehaviour:
   mashButton: {fileID: 8604872977744853693}
   counterText: {fileID: 8604872976916740990}
   timerText: {fileID: 8604872976033860460}
+  allItems:
+  - {fileID: 2072898846570990831}
   timeLimit: 10
   winCount: 20
 --- !u!212 &3148645990370068559
@@ -1090,6 +1079,7 @@ GameObject:
   - component: {fileID: 8604872977744853692}
   - component: {fileID: 8604872977744853693}
   - component: {fileID: 433465024188161829}
+  - component: {fileID: 2072898846570990831}
   m_Layer: 5
   m_Name: FoodButton
   m_TagString: Untagged
@@ -1240,3 +1230,15 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2072898846570990831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8604872977744853691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c912df5a1a81ea498c3a3ea13818cb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
