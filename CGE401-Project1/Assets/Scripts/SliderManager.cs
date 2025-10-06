@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI; // Required for UI elements like Slider
+using UnityEngine.UI; 
+using UnityEngine.SceneManagement;
+
 /*
 * Mimi Davis
 * Project1
@@ -30,6 +32,11 @@ public class SliderManager : MonoBehaviour
                 if (currentProgress >= progressBar.maxValue)
                 {
                      Debug.Log("All minigames completed!");
+                     //Press R to restart if game is over
+                    if (Input.GetKeyDown(KeyCode.R))
+                    {
+                        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                    }
                      Destroy(invisWall.gameObject);
                     // Trigger end-game or reward logic
                 }
