@@ -5,6 +5,11 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+/*
+* Maile Fidale and Mimi Davis
+* Project1
+* Hearts for the player, loses when hit by enemy 
+*/
 
 public class HealthSystem : MonoBehaviour
 {
