@@ -17,7 +17,7 @@ public class GameTimer3 : MonoBehaviour
     private float currentTime;
     private bool gameActive = false;
     public TextMeshProUGUI timerText;
-
+    public SliderManager sliderBarManager;
     public List<ClickableItem> allItems; // Assign all your clickable items here in the Inspector
 
     void OnEnable()
@@ -91,6 +91,14 @@ public class GameTimer3 : MonoBehaviour
         if (win)
         {
             timerText.text = "You Win!\n Press the X to exit the minigame!";
+            if (sliderBarManager != null)
+            {
+                sliderBarManager.MinigameWon();
+            }
+            else
+            {
+                Debug.LogError("Progress Bar Manager is not assigned in the Inspector of MinigameController!");
+            }
         }
         else
         {

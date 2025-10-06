@@ -16,6 +16,7 @@ public class MinigameController : MonoBehaviour
     public TextMeshProUGUI counterText;
     public TextMeshProUGUI timerText;
     public List<MashButton> allItems;
+    public SliderManager sliderBarManager;
     // Game parameters
     public float timeLimit = 10f; // 10 seconds
     public int winCount = 50; // Mash the button 50 times to win
@@ -97,6 +98,15 @@ public class MinigameController : MonoBehaviour
         {
             gameActive = false;
             timerText.text = "You Win!\n Press the X button to exit!";
+
+            if (sliderBarManager != null)
+            {
+                sliderBarManager.MinigameWon();
+            }
+            else
+            {
+                Debug.LogError("Progress Bar Manager is not assigned in the Inspector of MinigameController!");
+            }
         }
         else
         {
