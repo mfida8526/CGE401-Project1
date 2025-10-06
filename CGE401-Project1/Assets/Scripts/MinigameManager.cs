@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MinigameManager : MonoBehaviour
+/*public class MinigameManager : MonoBehaviour
 {
      public GameObject minigamePrefab;
     private GameObject currentMinigame;
@@ -39,4 +39,4 @@ public class MinigameManager : MonoBehaviour
             // Maybe penalize or allow retry
         }
     }
-}
+}*/

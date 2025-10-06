@@ -77,9 +77,9 @@ public class PlayerController : MonoBehaviour
            isGrounded = true;
            animator.SetBool("isJumping", !isGrounded);
 
-        if (other.CompareTag("FoodTrigger"))
+       /* if (other.CompareTag("FoodTrigger"))
         {
             FindObjectOfType<MinigameManager>().LaunchMinigame();
-        }
+        }*/
     }
 }
