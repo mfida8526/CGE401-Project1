@@ -14,7 +14,8 @@ public class SliderManager : MonoBehaviour
   public Slider progressBar; // Assign your UI Slider here in the Inspector
   private int currentProgress = 0; // Tracks the current progress value
   public GameObject invisWall;
-
+  
+  
      // Call this method when a minigame is won
      public void MinigameWon()
      {
@@ -22,7 +23,7 @@ public class SliderManager : MonoBehaviour
         UpdateProgressBar(); // Update the visual representation
      }   
 
-       
+
    private void UpdateProgressBar()
         {
             if (progressBar != null)
