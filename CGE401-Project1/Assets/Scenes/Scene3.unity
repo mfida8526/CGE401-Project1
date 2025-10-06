@@ -909,6 +909,12 @@ Transform:
   m_Father: {fileID: 1515976077}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &133849180 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1851624636868080425, guid: f75b83d587eb1314dbe9a793b07caf09,
+    type: 3}
+  m_PrefabInstance: {fileID: 247159980}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &137130774
 GameObject:
   m_ObjectHideFlags: 0
@@ -19410,7 +19416,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -157.5}
+  m_AnchoredPosition: {x: 0, y: -89}
   m_SizeDelta: {x: -78.00098, y: -334.9376}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &823910117
@@ -31014,7 +31020,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!156049354 &1026372297
 Grid:
   m_ObjectHideFlags: 0
@@ -31890,11 +31896,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8604872977394219329, guid: e13fbd584b639d248adc6bca1b28383f,
-        type: 3}
-      propertyPath: sliderBarManager
-      value: 
-      objectReference: {fileID: 1588739108}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e13fbd584b639d248adc6bca1b28383f, type: 3}
 --- !u!224 &1123593025 stripped
@@ -32734,11 +32735,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8604872977394219329, guid: e13fbd584b639d248adc6bca1b28383f,
-        type: 3}
-      propertyPath: sliderBarManager
-      value: 
-      objectReference: {fileID: 1588739108}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e13fbd584b639d248adc6bca1b28383f, type: 3}
 --- !u!224 &1218857800 stripped
@@ -34824,6 +34820,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 215e23c886a942c41b7d60f3a4883a93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Name: 
+  m_Name: 
+  m_Name: 
+  m_Name: 
+  m_Name: 
+  m_Name: 
+  m_Name: 
+  sortingMinigame: {fileID: 133849180}
 --- !u!1 &1258236454
 GameObject:
   m_ObjectHideFlags: 0
@@ -41003,11 +41007,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: ca251c1f10270a045ab94dacc67c9b43,
         type: 3}
-    - target: {fileID: 8402375296222624251, guid: 0c0895c8aa4daa84b99e034e1c2e3a2b,
-        type: 3}
-      propertyPath: sliderBarManager
-      value: 
-      objectReference: {fileID: 1588739108}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c0895c8aa4daa84b99e034e1c2e3a2b, type: 3}
 --- !u!224 &1751758031 stripped
@@ -41400,6 +41399,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: beab2fb0624def14c94a4cb24cfd45cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Name: 
+  m_Name: 
+  m_Name: 
+  m_Name: 
+  m_Name: 
+  m_Name: 
+  m_Name: 
+  minigamePrefab: {fileID: 133849180}
+  currentMinigame: {fileID: 0}
+  minigamePanelParent: {fileID: 0}
 --- !u!4 &1807758530
 Transform:
   m_ObjectHideFlags: 0
@@ -41459,6 +41468,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 215e23c886a942c41b7d60f3a4883a93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Name: 
+  m_Name: 
+  m_Name: 
+  m_Name: 
+  m_Name: 
+  m_Name: 
+  m_Name: 
+  sortingMinigame: {fileID: 0}
 --- !u!61 &1813435187
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -42085,7 +42102,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!156049354 &1908370362
 Grid:
   m_ObjectHideFlags: 0
@@ -50454,7 +50471,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -91}
+  m_AnchoredPosition: {x: 0, y: -162.2}
   m_SizeDelta: {x: -78.00098, y: -334.9376}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2029994818
@@ -51128,6 +51145,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 215e23c886a942c41b7d60f3a4883a93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Name: 
+  m_Name: 
+  m_Name: 
+  m_Name: 
+  m_Name: 
+  m_Name: 
+  m_Name: 
+  sortingMinigame: {fileID: 0}
 --- !u!61 &2090310505
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -51390,11 +51415,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8604872977394219329, guid: e13fbd584b639d248adc6bca1b28383f,
-        type: 3}
-      propertyPath: sliderBarManager
-      value: 
-      objectReference: {fileID: 1588739108}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e13fbd584b639d248adc6bca1b28383f, type: 3}
 --- !u!224 &2135119604 stripped
@@ -51717,11 +51737,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 5822819ec32c7c943be25ab1cf4b630e,
         type: 3}
-    - target: {fileID: 8402375296222624251, guid: 0c0895c8aa4daa84b99e034e1c2e3a2b,
-        type: 3}
-      propertyPath: sliderBarManager
-      value: 
-      objectReference: {fileID: 1588739108}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c0895c8aa4daa84b99e034e1c2e3a2b, type: 3}
 --- !u!224 &4956010723344782311 stripped

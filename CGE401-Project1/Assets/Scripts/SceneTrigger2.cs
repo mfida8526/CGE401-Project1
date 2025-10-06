@@ -14,7 +14,7 @@ using UnityEngine.SceneManagement;
             // Check if the entering object is the player (or whatever you want to trigger the scene change)
             if (other.CompareTag("Player")) 
             {
-                SceneManager.LoadScene(nextSceneName); 
+                SceneManager.LoadScene("Scene3"); 
             }
         }
     }
