@@ -2,7 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+/*
+* Mimi Davis
+* Project1
+* This makes the npcs have dialogue that opens with a panel and continue button
+*/
 public class NPC1Script : MonoBehaviour
 {
     public GameObject dialoguePanel;

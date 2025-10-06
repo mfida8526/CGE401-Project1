@@ -4,7 +4,11 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System;
-
+/*
+* Mimi Davis
+* Project1
+* Food items that open minigame panels
+*/
 public class FoodTrigger2 : MonoBehaviour
 {
     
@@ -13,7 +17,7 @@ public class FoodTrigger2 : MonoBehaviour
     
     void Start()
     {
-        mashingMinigame.GetComponent<ClickingMinigame>();
+        mashingMinigame.GetComponent<MinigameController>();
         mashingMinigame.SetActive(false);
     }
 
