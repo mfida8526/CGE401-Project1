@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -476,7 +476,7 @@ Transform:
   m_Children:
   - {fileID: 2032995789}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &53710990
 GameObject:
@@ -2805,7 +2805,7 @@ PrefabInstance:
     - target: {fileID: 140282031921050020, guid: 941e7ee83261d544ea3367503892f38b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 140282031921050020, guid: 941e7ee83261d544ea3367503892f38b,
         type: 3}
@@ -3797,7 +3797,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &520607096
 PrefabInstance:
@@ -4841,7 +4841,7 @@ RectTransform:
   - {fileID: 447436688}
   - {fileID: 888794316}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -30770,7 +30770,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1022934429
 MonoBehaviour:
@@ -30978,7 +30978,7 @@ Transform:
   - {fileID: 976515834}
   - {fileID: 473252518}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1029757492
 GameObject:
@@ -31117,6 +31117,11 @@ PrefabInstance:
       propertyPath: m_Text
       value: Hey there, I'm Richard! Been having it rough recently and haven't had
         the chance to get any food for the family. 4 food items would be appreciated!
+      objectReference: {fileID: 0}
+    - target: {fileID: 5633434686503048964, guid: 101a6eedced410443930513c3db78e7b,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 34
       objectReference: {fileID: 0}
     - target: {fileID: 5633434686902676221, guid: 101a6eedced410443930513c3db78e7b,
         type: 3}
@@ -31580,7 +31585,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &1094422510
 AudioSource:
@@ -31992,7 +31997,7 @@ Transform:
   - {fileID: 684518885}
   - {fileID: 866522944}
   m_Father: {fileID: 2143036365}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1146604043
 PrefabInstance:
@@ -34434,7 +34439,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &1243001228
 GameObject:
@@ -34901,7 +34906,7 @@ RectTransform:
   - {fileID: 1043549579}
   - {fileID: 1323049967}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -38782,7 +38787,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -38803,6 +38808,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   progressBar: {fileID: 689219800}
   invisWall: {fileID: 900418735}
+  packageButton: {fileID: 0}
 --- !u!1001 &1592275262
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40894,49 +40900,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1805918209}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1807758528
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1807758530}
-  - component: {fileID: 1807758529}
-  m_Layer: 0
-  m_Name: MinigameManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1807758529
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1807758528}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: beab2fb0624def14c94a4cb24cfd45cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &1807758530
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1807758528}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 136.86574, y: 118.72646, z: -2.4375}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1813435184
 GameObject:
   m_ObjectHideFlags: 0
@@ -41659,7 +41622,7 @@ Transform:
   - {fileID: 1353083183}
   - {fileID: 1992705836}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1911903971
 GameObject:
@@ -50151,7 +50114,7 @@ Transform:
   m_Children:
   - {fileID: 2020803174}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!70 &2052456102
 CapsuleCollider2D:
@@ -50876,10 +50839,10 @@ Transform:
   - {fileID: 1597527503}
   - {fileID: 87296361}
   - {fileID: 161541858}
-  - {fileID: 1661769286}
   - {fileID: 1135236844}
+  - {fileID: 1661769286}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &140282032042929860
 PrefabInstance:
