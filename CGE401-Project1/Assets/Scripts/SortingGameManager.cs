@@ -86,13 +86,13 @@ public class SortingGameManager : MonoBehaviour
         exitButton.SetActive(true);
 
         if (sliderBarManager != null)
-            {
+        {
                 sliderBarManager.MinigameWon();
-            }
-            else
-            {
+        }
+        else
+        {
                 Debug.LogError("Progress Bar Manager is not assigned in the Inspector of MinigameController!");
-            }
+        }
     }
 
     public void ExitMinigame()
