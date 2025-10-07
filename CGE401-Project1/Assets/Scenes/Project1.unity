@@ -18609,6 +18609,11 @@ PrefabInstance:
       propertyPath: minigamePrefabInstance
       value: 
       objectReference: {fileID: 1531152839}
+    - target: {fileID: 4301131477144203346, guid: f75b83d587eb1314dbe9a793b07caf09,
+        type: 3}
+      propertyPath: sliderBarManager
+      value: 
+      objectReference: {fileID: 1588739108}
     - target: {fileID: 4301131477181238611, guid: f75b83d587eb1314dbe9a793b07caf09,
         type: 3}
       propertyPath: m_textInfo.characterCount
