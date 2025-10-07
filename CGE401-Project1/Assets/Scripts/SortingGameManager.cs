@@ -20,6 +20,7 @@ public class SortingGameManager : MonoBehaviour
     private float currentTime;
     private bool timerRunning = false;
     private int itemsSorted = 0;
+    public SliderManager sliderBarManager;
 
     private int totalItemsToSort;
     public GameObject exitButton;
@@ -83,6 +84,15 @@ public class SortingGameManager : MonoBehaviour
         timerRunning = false;
         statusText.text = win ? "You Win! \n Press X to Exit" : "Time's Up! Press R to Restart";
         exitButton.SetActive(true);
+
+        if (sliderBarManager != null)
+            {
+                sliderBarManager.MinigameWon();
+            }
+            else
+            {
+                Debug.LogError("Progress Bar Manager is not assigned in the Inspector of MinigameController!");
+            }
     }
 
     public void ExitMinigame()

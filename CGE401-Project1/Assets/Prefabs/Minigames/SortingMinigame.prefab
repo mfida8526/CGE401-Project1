@@ -1293,7 +1293,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4301131477124310714
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1406,7 +1406,9 @@ MonoBehaviour:
   timerText: {fileID: 4301131476157388993}
   statusText: {fileID: 4301131477353279719}
   timeLimit: 30
+  sliderBarManager: {fileID: 0}
   exitButton: {fileID: 4301131477514273025}
+  minigamePrefabInstance: {fileID: 0}
 --- !u!1 &4301131477181238613
 GameObject:
   m_ObjectHideFlags: 0
@@ -2117,7 +2119,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &4301131477514273024
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2135,7 +2137,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -324.49838, y: 184.47693}
+  m_AnchoredPosition: {x: -297.7, y: 160.3}
   m_SizeDelta: {x: 37.626015, y: 31.1652}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4301131477514273052
@@ -2213,9 +2215,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4301131477144203346}
-        m_MethodName: ExitMinigame
-        m_Mode: 1
+      - m_Target: {fileID: 4301131477124310715}
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
