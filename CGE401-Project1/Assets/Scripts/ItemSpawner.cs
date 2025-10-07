@@ -2,6 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+* Maile Fidale
+* Project1
+* randomly spawns food items
+*/
+
 public class ItemSpawner : MonoBehaviour
 {
     public List<GameObject> foodPrefabs; // Assign your fruit and veggie prefabs

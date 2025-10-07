@@ -3,6 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/*
+* Maile Fidale
+* Project1
+* introductory text for game, sets the narrative
+*/
+
 public class IntroductionText : MonoBehaviour
 {
     public GameObject introductionPanel;

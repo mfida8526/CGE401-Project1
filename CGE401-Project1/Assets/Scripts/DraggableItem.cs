@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
+/*
+* Maile Fidale
+* Project1
+* allows player to drag and drop food items
+*/
 
 public enum ItemType
 {

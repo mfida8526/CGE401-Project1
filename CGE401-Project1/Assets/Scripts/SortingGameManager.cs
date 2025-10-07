@@ -4,6 +4,12 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
+/*
+* Maile Fidale
+* Project1
+* manages win and lose conditions for sorting minigame
+*/
+
 public class SortingGameManager : MonoBehaviour
 {
     public ItemSpawner itemSpawner;
