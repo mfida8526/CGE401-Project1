@@ -48,6 +48,7 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("isJumping", !isGrounded);
             playerAudio.PlayOneShot(jumpSound, 1.0f);
         }
+
     }
 
     void FixedUpdate()

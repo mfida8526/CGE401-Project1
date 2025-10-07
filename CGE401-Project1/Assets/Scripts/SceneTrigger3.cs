@@ -1,20 +1,40 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 /*
 * Mimi Davis
 * Project1
-* Makes player walk into trigger zone to get to the next scene
+* Makes player walk into trigger zone to get to get the win screen
 */
-    public class SceneTrigger3 : MonoBehaviour
+public class SceneTrigger3 : MonoBehaviour
+{
+    public GameObject winPanel;
+    
+    void Start()
     {
-        public string nextSceneName; // Assign the name of the next scene in the Inspector
+        winPanel.SetActive(false);
+    }
 
-        private void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
         {
-            // Check if the entering object is the player (or whatever you want to trigger the scene change)
-            if (other.CompareTag("Player")) 
+            if (winPanel != null)
             {
-                SceneManager.LoadScene(nextSceneName); 
+                winPanel.SetActive(true);
+                Interact();
+            }
+            else
+            {
+                winPanel.SetActive(false);
             }
         }
     }
+
+    private void Interact()
+    {
+        winPanel.SetActive(true);
+    }
+}

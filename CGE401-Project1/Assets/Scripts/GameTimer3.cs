@@ -62,13 +62,15 @@ public class GameTimer3 : MonoBehaviour
         {
             item.ResetItem(); // Ensure all items are visible
         }
-        // Additional setup like displaying timer, etc.
+
+          
+        
     }
 
     void HandleItemClicked(GameObject clickedItem)
     {
         // Logic for checking if all items are clicked, etc.
-        // For simplicity, we'll just check if all are inactive
+        
         bool allClicked = true;
         foreach (ClickableItem item in allItems)
         {
@@ -90,6 +92,7 @@ public class GameTimer3 : MonoBehaviour
         gameActive = false;
         if (win)
         {
+            
             timerText.text = "You Win!\n Press the X to exit the minigame!";
             if (sliderBarManager != null)
             {
@@ -104,7 +107,7 @@ public class GameTimer3 : MonoBehaviour
         {
             timerText.text = "You Lose!\n Press R to retry!";
         }
-        // Display game over message, etc.
+        
     }
 
     void RestartMinigame()
