@@ -14,6 +14,8 @@ public class SliderManager : MonoBehaviour
   public Slider progressBar; // Assign your UI Slider here in the Inspector
   private int currentProgress = 0; // Tracks the current progress value
   public GameObject invisWall;
+
+    public GameObject packageButton;
   
   
      // Call this method when a minigame is won
@@ -33,11 +35,17 @@ public class SliderManager : MonoBehaviour
                 if (currentProgress >= progressBar.maxValue)
                 {
                      Debug.Log("All minigames completed!");
-                     //Press R to restart if game is over
-                    if (Input.GetKeyDown(KeyCode.R))
+                //Press R to restart if game is over
+
+                if (packageButton != null)
+                {
+                    packageButton.SetActive(true); // Show the package button
+                }
+                /*
+                if (Input.GetKeyDown(KeyCode.R))
                     {
                         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-                    }
+                    }*/
                      Destroy(invisWall.gameObject);
                     // Trigger end-game or reward logic
                 }
@@ -52,5 +60,7 @@ public class SliderManager : MonoBehaviour
         void Start()
         {
             UpdateProgressBar();
-        }     
+        if (packageButton != null)
+            packageButton.SetActive(false); // Hide by default
+    }     
 }
