@@ -9,6 +9,7 @@ TagManager:
   - SortableItem
   - FoodTrigger
   - ClickableObject
+  - CorrectDropZone
   layers:
   - Default
   - TransparentFX

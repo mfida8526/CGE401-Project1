@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class SortingGameManager : MonoBehaviour
 {
@@ -15,6 +16,9 @@ public class SortingGameManager : MonoBehaviour
     private int itemsSorted = 0;
 
     private int totalItemsToSort;
+    public GameObject exitButton;
+    public GameObject minigamePrefabInstance; // assign the actual prefab instance root here
+
 
 
     void Start()
@@ -41,6 +45,7 @@ public class SortingGameManager : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.R))
             {
                 StartNewGame();
+                exitButton.SetActive(false);
             }
         }
     }
@@ -64,11 +69,20 @@ public class SortingGameManager : MonoBehaviour
 
         itemSpawner.SpawnFoodItems();
         totalItemsToSort = itemSpawner.spawnedItems.Count;
+        exitButton.SetActive(false);
     }
 
     void EndGame(bool win)
     {
         timerRunning = false;
-        statusText.text = win ? "You Win!" : "Time's Up! Press R to Restart";
+        statusText.text = win ? "You Win! \n Press X to Exit" : "Time's Up! Press R to Restart";
+        exitButton.SetActive(true);
     }
+
+    public void ExitMinigame()
+    {
+        if (minigamePrefabInstance != null)
+            minigamePrefabInstance.SetActive(false);
+    }
+
 }
