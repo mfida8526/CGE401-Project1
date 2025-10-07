@@ -13,6 +13,7 @@ public class IntroductionText : MonoBehaviour
 {
     public GameObject introductionPanel;
     public Text introductionText;
+    public Text titleText;
     public string[] dialogue;
     private int index;
 
@@ -22,6 +23,7 @@ public class IntroductionText : MonoBehaviour
     void Start()
     {
         introductionPanel.SetActive(true);
+        StartCoroutine(Typing());  // Start the typing animation
     }
     // Update is called once per frame
     void Update()
