@@ -15,6 +15,7 @@ public class SortingGameManager : MonoBehaviour
     public ItemSpawner itemSpawner;
     public TextMeshProUGUI timerText;
     public TextMeshProUGUI statusText;
+    public Text tutorialText;
 
     public float timeLimit = 30f;
     private float currentTime;
@@ -26,7 +27,7 @@ public class SortingGameManager : MonoBehaviour
     public GameObject exitButton;
     public GameObject minigamePrefabInstance; // assign the actual prefab instance root here
 
-
+    //public GamePauseManager pauseManager;
 
     void Start()
     {
@@ -69,6 +70,9 @@ public class SortingGameManager : MonoBehaviour
 
     void StartNewGame()
     {
+        // Pause the main game
+        //pauseManager.PauseGame();
+
         itemsSorted = 0;
         currentTime = timeLimit;
         timerRunning = true;
@@ -82,8 +86,11 @@ public class SortingGameManager : MonoBehaviour
     void EndGame(bool win)
     {
         timerRunning = false;
-        statusText.text = win ? "You Win! \n Press X to Exit" : "Time's Up! Press R to Restart";
+        statusText.text = win ? "You Win! \n Click X to Exit" : "Time's Up! Press R to Restart";
         exitButton.SetActive(true);
+
+        // Resume main game
+        //pauseManager.ResumeGame();
 
         if (sliderBarManager != null)
         {
