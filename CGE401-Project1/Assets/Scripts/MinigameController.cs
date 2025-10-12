@@ -11,24 +11,24 @@ using UnityEngine.UI;
 
 public class MinigameController : MonoBehaviour
 {
-    // Assign these in the Unity Inspector
+    
     public Button mashButton;
     public TextMeshProUGUI counterText;
     public TextMeshProUGUI timerText;
     public List<MashButton> allItems;
     public SliderManager sliderBarManager;
-    // Game parameters
-    public float timeLimit = 10f; // 10 seconds
-    public int winCount = 50; // Mash the button 50 times to win
+   
+    public float timeLimit = 10f; 
+    public int winCount = 50; 
 
-    // Internal state variables
+    
     private int mashCount = 0;
     private float currentTime;
     private bool gameActive = false;
     
     void Start()
     {
-        // Add a listener to the button's OnClick event
+        
         mashButton.onClick.AddListener(OnMash);
         ResetGame();
     }
@@ -40,10 +40,10 @@ public class MinigameController : MonoBehaviour
             return;
         }
 
-        // Decrease the timer
+        
         currentTime -= Time.deltaTime;
 
-        // Update the timer text
+        
         timerText.text = $"Time Left: {Mathf.Max(0, currentTime):F2}";
 
         // Check for win/loss conditions
