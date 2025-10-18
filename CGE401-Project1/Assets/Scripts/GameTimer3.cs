@@ -33,13 +33,15 @@ public class GameTimer3 : MonoBehaviour
     void Start()
     {
         StartMinigame();
+
+        Time.timeScale = 0f;
     }
 
     void Update()
     {
         if (gameActive)
         {
-            currentTime -= Time.deltaTime;
+            currentTime -= Time.unscaledDeltaTime;
             timerText.text = $"Time Left: {Mathf.Max(0, currentTime):F2}";
             if (currentTime <= 0)
             {
@@ -87,12 +89,12 @@ public class GameTimer3 : MonoBehaviour
         }
     }
 
-    void EndMinigame(bool win)
+    public void EndMinigame(bool win)
     {
         gameActive = false;
         if (win)
         {
-            
+            Time.timeScale = 1f;
             timerText.text = "You Win!\n Press the X to exit the minigame!";
             if (sliderBarManager != null)
             {
