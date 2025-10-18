@@ -22,6 +22,8 @@ public class TypingMinigameManager : MonoBehaviour
 
     void Start()
     {
+        Time.timeScale = 0f;
+
         InitializeGame();
     }
 
@@ -29,7 +31,7 @@ public class TypingMinigameManager : MonoBehaviour
     {
         if (gameActive)
         {
-            currentTime -= Time.deltaTime;
+            currentTime -= Time.unscaledDeltaTime;
             timerText.text = "Time: " + Mathf.Max(0, Mathf.FloorToInt(currentTime)).ToString();
 
             if (currentTime <= 0)
@@ -65,7 +67,7 @@ public class TypingMinigameManager : MonoBehaviour
     void GenerateNewPrompt()
     {
         // Example: Replace with your prompt generation logic
-        string[] prompts = { "pantry", "helpful", "delivery", "kitchen", "food", "resource" };
+        string[] prompts = { "pantry", "helpful", "delivery", "kitchen", "food", "resource", "harvest", "heart" };
         currentPrompt = prompts[Random.Range(0, prompts.Length)];
         promptText.text = currentPrompt;
     }
@@ -79,6 +81,8 @@ public class TypingMinigameManager : MonoBehaviour
         if (won)
         {
             gameOverText.text = "You Win!\nClick the X button to leave.";
+
+            Time.timeScale = 1f;
 
             if (sliderBarManager != null)
             {

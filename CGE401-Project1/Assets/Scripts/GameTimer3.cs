@@ -95,7 +95,7 @@ public class GameTimer3 : MonoBehaviour
         if (win)
         {
             Time.timeScale = 1f;
-            timerText.text = "You Win!\n Press the X to exit the minigame!";
+            timerText.text = "You Win!\n Click the X to exit the minigame!";
             if (sliderBarManager != null)
             {
                 sliderBarManager.MinigameWon();
