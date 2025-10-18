@@ -2,6 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+* Maile Fidale
+* Project1
+* player takes damage when hit by enemy bee, cool down
+*/
+
 public class Enemy : MonoBehaviour
 {
     public HealthSystem healthSystem;
