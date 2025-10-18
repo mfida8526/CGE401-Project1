@@ -27,18 +27,18 @@ public class SortingGameManager : MonoBehaviour
     public GameObject exitButton;
     public GameObject minigamePrefabInstance; // assign the actual prefab instance root here
 
-    //public GamePauseManager pauseManager;
-
     void Start()
     {
         StartNewGame();
+
+        Time.timeScale = 0f;
     }
 
     void Update()
     {
         if (timerRunning)
         {
-            currentTime -= Time.deltaTime;
+            currentTime -= Time.unscaledDeltaTime;
             currentTime = Mathf.Clamp(currentTime, 0, timeLimit);
             timerText.text = "Time: " + Mathf.CeilToInt(currentTime);
 
@@ -79,9 +79,6 @@ public class SortingGameManager : MonoBehaviour
 
     void StartNewGame()
     {
-        // Pause the main game
-        //pauseManager.PauseGame();
-
         itemsSorted = 0;
         currentTime = timeLimit;
         timerRunning = true;
@@ -97,13 +94,12 @@ public class SortingGameManager : MonoBehaviour
         timerRunning = false;
         statusText.text = win ? "You Win! \n Click X to Exit" : "Time's Up! Press R to Restart";
         exitButton.SetActive(true);
-
-        // Resume main game
-        //pauseManager.ResumeGame();
     }
 
     public void ExitMinigame()
     {
+        Time.timeScale = 1f;
+
         if (minigamePrefabInstance != null)
             minigamePrefabInstance.SetActive(false);
     }

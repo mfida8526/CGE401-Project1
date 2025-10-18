@@ -31,6 +31,8 @@ public class MinigameController : MonoBehaviour
         
         mashButton.onClick.AddListener(OnMash);
         ResetGame();
+
+        Time.timeScale = 0f;
     }
 
     void Update()
@@ -41,7 +43,7 @@ public class MinigameController : MonoBehaviour
         }
 
         
-        currentTime -= Time.deltaTime;
+        currentTime -= Time.unscaledDeltaTime;
 
         
         timerText.text = $"Time Left: {Mathf.Max(0, currentTime):F2}";
@@ -90,7 +92,7 @@ public class MinigameController : MonoBehaviour
         StartMinigame();
     }
 
-    void EndGame(bool won)
+    public void EndGame(bool won)
     {
         mashButton.interactable = false; // Disable the button
 
@@ -98,6 +100,8 @@ public class MinigameController : MonoBehaviour
         {
             gameActive = false;
             timerText.text = "You Win!\n Press the X button to exit!";
+
+            Time.timeScale = 1f;
 
             if (sliderBarManager != null)
             {
