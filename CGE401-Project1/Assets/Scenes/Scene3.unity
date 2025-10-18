@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1871,6 +1871,87 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 269626090}
   m_CullTransparentMesh: 0
+--- !u!1001 &276622175
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1026372298}
+    m_Modifications:
+    - target: {fileID: 2573565854718071300, guid: d451efc920d8af7498cd562f7f880cb5,
+        type: 3}
+      propertyPath: m_Name
+      value: Barrier
+      objectReference: {fileID: 0}
+    - target: {fileID: 2573565854718071301, guid: d451efc920d8af7498cd562f7f880cb5,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 104.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2573565854718071301, guid: d451efc920d8af7498cd562f7f880cb5,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2573565854718071301, guid: d451efc920d8af7498cd562f7f880cb5,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2573565854718071301, guid: d451efc920d8af7498cd562f7f880cb5,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2573565854718071301, guid: d451efc920d8af7498cd562f7f880cb5,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2573565854718071301, guid: d451efc920d8af7498cd562f7f880cb5,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2573565854718071301, guid: d451efc920d8af7498cd562f7f880cb5,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2573565854718071301, guid: d451efc920d8af7498cd562f7f880cb5,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 2573565854718071301, guid: d451efc920d8af7498cd562f7f880cb5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2573565854718071301, guid: d451efc920d8af7498cd562f7f880cb5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2573565854718071301, guid: d451efc920d8af7498cd562f7f880cb5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d451efc920d8af7498cd562f7f880cb5, type: 3}
+--- !u!4 &276622176 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2573565854718071301, guid: d451efc920d8af7498cd562f7f880cb5,
+    type: 3}
+  m_PrefabInstance: {fileID: 276622175}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &276622177 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2573565854718071300, guid: d451efc920d8af7498cd562f7f880cb5,
+    type: 3}
+  m_PrefabInstance: {fileID: 276622175}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &278376872
 GameObject:
   m_ObjectHideFlags: 0
@@ -4750,6 +4831,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialoguePanel: {fileID: 2029994816}
   dialogueText: {fileID: 1134343834}
+  barrierWall: {fileID: 276622177}
   dialogue:
   - Hi! You deliver fast!
   - Life hasn't been too good to me recently...
@@ -32094,6 +32176,7 @@ Transform:
   - {fileID: 473252518}
   - {fileID: 32072640}
   - {fileID: 976515834}
+  - {fileID: 276622176}
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -37025,7 +37108,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.3175267, y: 0.22967097}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -37036,7 +37119,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.2839234, y: 1.6112175}
+  m_Size: {x: 2.9189765, y: 2.0705595}
   m_EdgeRadius: 0
 --- !u!1 &1393445958
 GameObject:
@@ -39595,6 +39678,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialoguePanel: {fileID: 1258236454}
   dialogueText: {fileID: 1515380787}
+  barrierWall: {fileID: 0}
   dialogue:
   - Thank you for this!
   - My job hasn't been paying much, we're having trouble making ends meet.
@@ -40798,6 +40882,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialoguePanel: {fileID: 823910115}
   dialogueText: {fileID: 1470396665}
+  barrierWall: {fileID: 0}
   dialogue:
   - Thank you for delivering this food, dearie!
   - You don't know how much this means to little old me.

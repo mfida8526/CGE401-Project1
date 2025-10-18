@@ -11,7 +11,7 @@ using UnityEngine.SceneManagement;
 */
 public class SliderManager : MonoBehaviour
 {
-  public Slider progressBar; // Assign your UI Slider here in the Inspector
+  public Slider progressBar;
   private int currentProgress = 0; // Tracks the current progress value
   public GameObject invisWall;
 
@@ -22,7 +22,7 @@ public class SliderManager : MonoBehaviour
      public void MinigameWon()
      {
         currentProgress++; // Increment progress by one unit
-        UpdateProgressBar(); // Update the visual representation
+        UpdateProgressBar();
      }   
 
 
@@ -41,13 +41,7 @@ public class SliderManager : MonoBehaviour
                 {
                     packageButton.SetActive(true); // Show the package button
                 }
-                /*
-                if (Input.GetKeyDown(KeyCode.R))
-                    {
-                        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-                    }*/
                      Destroy(invisWall.gameObject);
-                    // Trigger end-game or reward logic
                 }
             }
             else
@@ -56,7 +50,7 @@ public class SliderManager : MonoBehaviour
             }
         }
 
-        // Optional: Initialize the progress bar at the start
+
         void Start()
         {
             UpdateProgressBar();

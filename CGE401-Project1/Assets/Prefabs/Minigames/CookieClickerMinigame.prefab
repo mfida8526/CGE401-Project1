@@ -258,13 +258,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 124.262, w: 0}
   m_textInfo:
     textComponent: {fileID: 8563781545768440566}
-    characterCount: 0
+    characterCount: 42
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 12
+    wordCount: 8
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 4
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -414,13 +414,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 8604872976033860460}
-    characterCount: 0
+    characterCount: 8
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 1
+    wordCount: 2
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -503,7 +503,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &8604872976464142788
 RectTransform:
   m_ObjectHideFlags: 0
@@ -745,13 +745,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 33.769054}
   m_textInfo:
     textComponent: {fileID: 8604872976916740990}
-    characterCount: 0
+    characterCount: 8
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 1
+    wordCount: 2
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -1171,7 +1171,7 @@ MonoBehaviour:
   allItems:
   - {fileID: 5289169533562475979}
   sliderBarManager: {fileID: 0}
-  timeLimit: 10
+  timeLimit: 7
   winCount: 20
 --- !u!212 &3148645990370068559
 SpriteRenderer:

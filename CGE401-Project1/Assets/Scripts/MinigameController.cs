@@ -6,7 +6,7 @@ using UnityEngine.UI;
 /*
 * Mimi Davis
 * Project1
-* Game Manager for mashing-like minigame with a timer 
+* Game Manager for mashing mouse button minigame with a timer 
 */
 
 public class MinigameController : MonoBehaviour
@@ -99,7 +99,7 @@ public class MinigameController : MonoBehaviour
         if (won)
         {
             gameActive = false;
-            timerText.text = "You Win!\n Press the X button to exit!";
+            timerText.text = "You Win!\n Click the X button to exit!";
 
             Time.timeScale = 1f;
 

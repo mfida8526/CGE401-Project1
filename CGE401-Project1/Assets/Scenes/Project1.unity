@@ -728,12 +728,12 @@ PrefabInstance:
     - target: {fileID: 7300488265684200424, guid: f91fd509e3f358a4da2cd2d78dbdcb71,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 44.83
+      value: 44.47
       objectReference: {fileID: 0}
     - target: {fileID: 7300488265684200424, guid: f91fd509e3f358a4da2cd2d78dbdcb71,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.97
+      value: 8.68
       objectReference: {fileID: 0}
     - target: {fileID: 7300488265684200424, guid: f91fd509e3f358a4da2cd2d78dbdcb71,
         type: 3}
@@ -763,7 +763,7 @@ PrefabInstance:
     - target: {fileID: 7300488265684200424, guid: f91fd509e3f358a4da2cd2d78dbdcb71,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7300488265684200424, guid: f91fd509e3f358a4da2cd2d78dbdcb71,
         type: 3}
@@ -3831,6 +3831,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 490210298}
   m_CullTransparentMesh: 0
+--- !u!1 &501670268 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2573565854718071300, guid: d451efc920d8af7498cd562f7f880cb5,
+    type: 3}
+  m_PrefabInstance: {fileID: 2573565854665765752}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &501670269 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2573565854718071301, guid: d451efc920d8af7498cd562f7f880cb5,
+    type: 3}
+  m_PrefabInstance: {fileID: 2573565854665765752}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &506822764
 GameObject:
   m_ObjectHideFlags: 0
@@ -4289,6 +4301,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialoguePanel: {fileID: 2029994816}
   dialogueText: {fileID: 1134343834}
+  barrierWall: {fileID: 0}
   dialogue:
   - Hi! You deliver fast!
   - Life hasn't been too good to me recently...
@@ -18827,6 +18840,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 6753213538044292152, guid: f75b83d587eb1314dbe9a793b07caf09,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f75b83d587eb1314dbe9a793b07caf09, type: 3}
 --- !u!1 &659329959
@@ -18874,7 +18892,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.066797495, y: 0.32656026}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -18885,7 +18903,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.2839234, y: 1.6112175}
+  m_Size: {x: 3.1077118, y: 2.264338}
   m_EdgeRadius: 0
 --- !u!114 &659329962
 MonoBehaviour:
@@ -19810,7 +19828,7 @@ PrefabInstance:
     - target: {fileID: 7300488265684200424, guid: f91fd509e3f358a4da2cd2d78dbdcb71,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7300488265684200424, guid: f91fd509e3f358a4da2cd2d78dbdcb71,
         type: 3}
@@ -37049,6 +37067,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialoguePanel: {fileID: 1258236454}
   dialogueText: {fileID: 1515380787}
+  barrierWall: {fileID: 0}
   dialogue:
   - Thank you for this!
   - My job hasn't been paying much, we're having trouble making ends meet.
@@ -38057,6 +38076,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialoguePanel: {fileID: 823910115}
   dialogueText: {fileID: 1470396665}
+  barrierWall: {fileID: 501670268}
   dialogue:
   - Thank you for delivering this food, dearie!
   - You don't know how much this means to little old me.
@@ -40396,6 +40416,7 @@ Transform:
   - {fileID: 1551668424}
   - {fileID: 1635622478}
   - {fileID: 1750752382}
+  - {fileID: 501670269}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -49716,6 +49737,75 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &2573565854665765752
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1908370363}
+    m_Modifications:
+    - target: {fileID: 2573565854718071300, guid: d451efc920d8af7498cd562f7f880cb5,
+        type: 3}
+      propertyPath: m_Name
+      value: Barrier
+      objectReference: {fileID: 0}
+    - target: {fileID: 2573565854718071301, guid: d451efc920d8af7498cd562f7f880cb5,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 104
+      objectReference: {fileID: 0}
+    - target: {fileID: 2573565854718071301, guid: d451efc920d8af7498cd562f7f880cb5,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2573565854718071301, guid: d451efc920d8af7498cd562f7f880cb5,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2573565854718071301, guid: d451efc920d8af7498cd562f7f880cb5,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2573565854718071301, guid: d451efc920d8af7498cd562f7f880cb5,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2573565854718071301, guid: d451efc920d8af7498cd562f7f880cb5,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2573565854718071301, guid: d451efc920d8af7498cd562f7f880cb5,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2573565854718071301, guid: d451efc920d8af7498cd562f7f880cb5,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 2573565854718071301, guid: d451efc920d8af7498cd562f7f880cb5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2573565854718071301, guid: d451efc920d8af7498cd562f7f880cb5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2573565854718071301, guid: d451efc920d8af7498cd562f7f880cb5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d451efc920d8af7498cd562f7f880cb5, type: 3}
 --- !u!1001 &4956010723344782310
 PrefabInstance:
   m_ObjectHideFlags: 0

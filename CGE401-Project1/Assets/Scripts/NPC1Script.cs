@@ -11,6 +11,7 @@ public class NPC1Script : MonoBehaviour
 {
     public GameObject dialoguePanel;
     public Text dialogueText;
+    public GameObject barrierWall;
     public string[] dialogue;
     private int index;
     
@@ -70,6 +71,7 @@ public class NPC1Script : MonoBehaviour
         else
         {
             zeroText();
+            Destroy(barrierWall.gameObject);
         }
     }
 

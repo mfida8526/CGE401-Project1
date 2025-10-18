@@ -1269,7 +1269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bbf51efa82d9944bb174d8a19a3da52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeLimit: 10
+  timeLimit: 7
   timerText: {fileID: 8402375294532102268}
   sliderBarManager: {fileID: 0}
   allItems:
