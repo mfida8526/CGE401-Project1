@@ -65,7 +65,7 @@ public class SortingGameManager : MonoBehaviour
         if (itemsSorted >= totalItemsToSort)
         {
             EndGame(true);
-            
+
             if (sliderBarManager != null)
             {
                 sliderBarManager.MinigameWon();
