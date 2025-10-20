@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2801,7 +2801,7 @@ PrefabInstance:
     - target: {fileID: 8196206093015227027, guid: f38690f926c6e97459721cad4058b8a1,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8196206093015227028, guid: f38690f926c6e97459721cad4058b8a1,
         type: 3}
@@ -2841,7 +2841,7 @@ PrefabInstance:
     - target: {fileID: 8196206093015227028, guid: f38690f926c6e97459721cad4058b8a1,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8196206093015227028, guid: f38690f926c6e97459721cad4058b8a1,
         type: 3}
@@ -2907,6 +2907,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8196206093015227029, guid: f38690f926c6e97459721cad4058b8a1,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 635960678}
+    - target: {fileID: 8196206093015227029, guid: f38690f926c6e97459721cad4058b8a1,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PackageFood
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f38690f926c6e97459721cad4058b8a1, type: 3}
@@ -4159,6 +4169,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7300488265684200424, guid: f91fd509e3f358a4da2cd2d78dbdcb71,
     type: 3}
   m_PrefabInstance: {fileID: 524707046}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &526899421 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8196206093015227027, guid: f38690f926c6e97459721cad4058b8a1,
+    type: 3}
+  m_PrefabInstance: {fileID: 371629846}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &540516703
 GameObject:
@@ -18531,6 +18547,58 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &635960677
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 635960679}
+  - component: {fileID: 635960678}
+  m_Layer: 5
+  m_Name: PackageManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &635960678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 635960677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 501da870aafee5842b37328cfea9dd9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boxPrefab: {fileID: 4407612709489254366, guid: a5b45955fe222d34e95840c89622981f,
+    type: 3}
+  playerTransform: {fileID: 2052456101}
+  boxOffset: {x: 1, y: 0, z: 0}
+--- !u!224 &635960679
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 635960677}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1290721724}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &638639490
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35091,6 +35159,7 @@ RectTransform:
   - {fileID: 1592275263}
   - {fileID: 1492384957}
   - {fileID: 1043549579}
+  - {fileID: 635960679}
   - {fileID: 618659393}
   m_Father: {fileID: 0}
   m_RootOrder: 15
@@ -39101,7 +39170,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   progressBar: {fileID: 689219800}
   invisWall: {fileID: 900418735}
-  packageButton: {fileID: 0}
+  packageButton: {fileID: 526899421}
 --- !u!1001 &1592275262
 PrefabInstance:
   m_ObjectHideFlags: 0
